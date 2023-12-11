@@ -1,0 +1,602 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Lua语言入门 | 平常心</title><meta name="keywords" content="coloring pages,calendar 2023,bubble letters,multiplication chart,birthday wishes,Lua,编程语言,Lua语言入门"><meta name="author" content="南锋"><meta name="copyright" content="南锋"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Lua语言入门"><meta name="application-name" content="Lua语言入门"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Lua语言入门"><meta property="og:url" content="https://lengmo714.top/41246.html"><meta property="og:site_name" content="平常心"><meta property="og:description" content="遵照惯例，我们的第一个Lua程序时通过标准输出打印字符串”Hello World”:print(&amp;quot;Hello World&amp;quot;)         (adsbygoogle &amp;#x3D; window.adsbygoogle || []).push({});   如果读者使用的是Lua语言独立解"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://lengmo714.top/img/photo/26.png"><meta property="article:author" content="南锋"><meta property="article:tag" content="[&quot;游戏开发&quot;,&quot;ios&quot;,&quot;android&quot;,&quot;quick-cocos&quot;,&quot;游戏上架&quot;,&quot;cocoscreater&quot;,&quot;c语言&quot;,&quot;C++&quot;,&quot;Java&quot;,&quot;cocos2dx&quot;,&quot;Lua&quot;,&quot;matery&quot;,&quot;hexo&quot;,&quot;数据手套&quot;,&quot;嵌入式开发&quot;,&quot;stem32&quot;,&quot;python&quot;,&quot;calendar 2023&quot;,&quot;coloring pages&quot;,&quot;bubble letters&quot;]"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://lengmo714.top/img/photo/26.png"><meta name="description" content="遵照惯例，我们的第一个Lua程序时通过标准输出打印字符串”Hello World”:print(&amp;quot;Hello World&amp;quot;)         (adsbygoogle &amp;#x3D; window.adsbygoogle || []).push({});   如果读者使用的是Lua语言独立解"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://lengmo714.top/41246"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//hm.baidu.com"/><meta name="google-site-verification" content="https://lengmo714.top/sitemap.xml"/><meta name="baidu-site-verification" content="https://lengmo714.top/baidusitemap.xml"/><meta name="msvalidate.01" content="https://lengmo714.top/sitemap.xml"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-3160571902547760',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f4330d59a83b2e7ec1a0e440353b8b42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:{"enable":true,"maxBarrage":1,"barrageTime":4000,"accessToken":"","mailMd5":""},
+  root: '/',
+  preloader: undefined,
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: {"mode":"cdn","api":"https://img2color-go.vercel.app/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: {"appId":"5AX4I43FR2","apiKey":"d3a1f3c91989f681a3f3da8a80409d02","indexName":"first","hits":{"per_page":6},"languages":{"input_placeholder":"输入关键词后按下回车查找","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 南锋","link":"链接: ","source":"来源: 平常心","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '平常心',
+  title: 'Lua语言入门',
+  postAI: '',
+  pageFillDescription: '1.1 程序段, 1.2 一些语法规范, 1.3 全局变量, 1.4类型和值, 1.4.1 nil, 1.4.2 boolean, 1.5 独立解释器遵照惯例我们的第一个程序时通过标准输出打印字符串如果读者使用的是语言独立解释器要运行这第一个程序的话直接调用解释器运行包含程序代码的文本文件就可以了例如如果把上述代码保存为名的文件那么可以通过以下命令运行再来看一个稍微复杂点的例子以下代码定义了一个计算阶乘的函数该函数先让用户输入一个数然后打印出这个数的阶乘结果定义一个计算阶乘的函数读取一个数字程序段我们将语言执行的每一段代码称为一个程序段即一组命令或表达式组成的序列程序段既可以简单到只由一句表达式构成也可以由多句表达式和函数定义实际是复制表达式后面会详细介绍组成例如计算阶乘的示例程序段在大小上并没有限制事实上由于语言也可以被用作数据定义语言所以几的程序段也很常见语言的解释器可以支持非常大的程序段除了将源码保存成文件外我们有也可以直接在交互式模式下运行独立解释器当不带参数第调用时可以看到如下的输出此后输入的每一条命令都会在按下回车键后立即执行我们可以通过输入控制字符或调用操作系统库的函数执行退出交互模式从版本开始可以直接在交互模式下输入表达式语言会输出表达式的值例如要以代码段的方式运行代码不在交互模式下那么必须把表达式包在函数的调用中在交互模式下语言解释器一般会把我们输入的每一行当做完整的程序块或表达式解释执行但是如果语言解释器发现我们输入的某一行不完成那么它会等待直到程序块或表达式被输入完整后再进行解释执行这样我们也可以直接在交互模式下输入一个像阶乘函数示例那样的由多行组成的多行定义不过对于这种较长的函数定义而言将其保存文件然后再调用独立解释器来执行通常更方便我们可以使用参数让语言解释器在执行完制定的程序段后进入交互模式上述命令会在执行完文件中的程序后进入交互模式这对于调试和手工测试很有用在本章的最后我们会学习有关独立解释器的更多参数另一种运行程序段的方式调用函数该函数会立即执行一个文件例如假设我们有一个如下所示的文件然后在交互模式下运行加载文件函数在开发阶段也非常有用我们可以同时打开两个窗口一个窗口中使用文件编辑器编辑代码另一个窗口中使用交互模式运行语言解释器当修改完代码并保存后只要在语言交互模式的提示符下执行就可以加载新代码然后就可以观察新代码的函数调用和执行结果了一些语法规范语言中的标识符是由任意字母数字和下划线组成的字符串注意不能用数字开头例如下划线大写字母组成的标识符通过被语言用作特殊用途应避免将其用作其他用途我们通常将下划线小写字母用作哑变量以下是语言的保留字它们不能被用作标识符语言是对大小写敏感的因而是保留字但是和就是两个不同的标识符语言中使用两个连续的连字符表示单行注释使用两个连续的连字符加两对左方括号表示长注释或多行注释的开始指导两个连续的右括号为止中间都是注释例如多行长注释在注释一段代码时一个常见的技巧是将这些代码放入和之间例如无动作被注释掉了当我们需要重新启用这段代码时只需要在第一行行首添加一个连字符即可在第一个示例中第一行的表示一段多行注释的开始直到两个连续的右括号这段多行注释才会结束因而尽管最后一行有两个连续的连字符但由于这两个连字符在最后两个右括号之前所以仍然被注释掉了在第二个示例中由于第一行的实际是单行注释因此最后一行实际上也是一条独立的单行注释最后的两个连续右方括号没有与之匹配的并没有被注释掉在语言中连续语句之间的分隔符并不是必需的如果有需要的话可以使用分号来进行分割在语言中表达式之间的换行也不起任何作用例如以下个程序段都是合法且等价的这个根据个人习惯来全局变量在语言中全局变量无须声明即可使用使用未经初始化的全局变量也不会导致错误当使用未经初始化的全局变量时得到的结果是当把赋值给全局变量时会回收改全局变量就像该全局变量从来没有出现过一样例如语言不区分为初始化变量和被赋值为的变量在上述赋值语句执行后语言会最终回收该变量占用的内存类型和值语言是一种动态类型的语言在这种语言中没有类型定义每个值都带有其自身的类型信息语言中有个基本类型空布尔数值字符串用户数据函数线程和表使用函数可获取一个值对应的类型名称不管是什么最后一行返回的永远是这是因为函数的返回值永远是一个字符串类型允许把任意的语言数据保存在语言变量中在语言中用户数据类型除了赋值和相等性测试外没有其他预定义的操作用户数据被用来表示由应用或语言编写的库所创建的新类型例如标准库使用用户数据来表示打开的文件我们会在后面设计时再讨论更多的相关内容变量没有预定义的类型任何变量都可以包含任何类型的值没有初始化一般情况下将一个变量用作不同类型时会导致代码的可读性不佳但是在某些情况下谨慎地使用这个特行可能会带来一定程度的便利例如当代码发生异常时可以返回一个以区别于其他正常情况下的返回值是一种只有一个值的类型它的主要作用就是与其他所有值进行区分语言使用来表示无效值的情况像我们所学习的其他语言一个全局变量在第一次被赋值前的默认值就是而将赋值给全局变量则相当于将其删除类型具有两个值和它们分别代表了传统布尔值不过在语言中值并非是用于条件测试的唯一方式任何值都可以表示条件在语言中条件测试将除值和外的所有其他值视为真特别的是在条件检测中语言把零和空字符串也都视为真语言支持常见的逻辑运算符和和条检测试一样所有的逻辑运算将类型的和当做假而把其他值当作真独立解释器独立解释器是一个可以直接使用语言的小程序如果源代码文件第一行以井号开头那么解释器在加载该文件时会忽略这一行这个特征主要是为了方便在系统中将作为一种脚本解释器来使用假设独立解释器位于下当使用下列脚本或时不需要显式地调用语言解释器也可以直接运行脚本命令的完整参数如其中所有的参数都是可选的如前所述当不使用任何参数调用时就会直接进入交互模式参数允许我们直接在命令行中输入代码例如请注意在系统下需要使用双引号以防止错误第解析括号参数用于加载库正如之前提到的那样参数用于在运行完其他命令行参数后进入交互模式因此下面的命令会首先加载库然后执行的赋值语句并最终进入交互模式如果在交互模式下输入表达式那么解释器会输出表达式求值后的结果请记住这个特征只在及之后的版本中才有效在之前的版本中必须在表达式前加上一个等号如果不想输出结果那么可以在行末加上一个分号分号使得最后一行在语法上变成了无效的表达式但可以被当作有效命令执行解释器在处理参数前会查找名为的环境变量如果找不到就会再查找名为的环境变量如果这两个环境变量中的任意一个存在并且其内容为那么解释器就会运行相应的文件如果这两个环境变量存在但是不以开头那么解释器就会认为其包含代码并会对其进行解释执行由于可以通过上面的方法完整地配置因而使得我们可以灵活地配置独立解释器例如我们可以预先加载程序包修改路径定义自定义函数对函数进行重命名或删除函数等等我们可以通过预先定义的全局变量来获取解释器传入的参数例如当执行如下命令时编辑器在运行代码前或创建一个名为的表其中存储了所有的命令行参数索引中保存的内容为脚本名索引中保存的内容为第一个参数以此类推而在脚本之前的所有选项则位于负数索引上例如解释器按照如下的方式获取参数一般情况下脚本只会用到索引为证书的参数语言也支持可变长参数可以通过可变长参数表达式来获取在脚本文件中表达式个点表示传递给脚本的所有参数',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-10 16:16:48',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://lengmo714.top" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a><a class="back-menu-item" href="https://lengmo714.top/libs/map/index.html" title="足迹"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/zuji.ico" alt="足迹"/><span class="back-menu-item-text">足迹</span></a><a class="back-menu-item" href="https://lengmo714.top/libs/love.html" title="爱心"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/heart.ico" alt="爱心"/><span class="back-menu-item-text">爱心</span></a><a class="back-menu-item" href="https://lengmo714.top/libs/Love/baby.html" title="表白网站"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/lianai.ico" alt="表白网站"/><span class="back-menu-item-text">表白网站</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">备用网站</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://lengmo714.gitee.io" title="平常心备用网站"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/beifen.ico" alt="平常心备用网站"/><span class="back-menu-item-text">平常心备用网站</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">京东小店</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://mall.jd.com/index-12955410.html" title="京东小店"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/jingdong.ico" alt="京东小店"/><span class="back-menu-item-text">京东小店</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">小游戏</div><div class="back-menu-list"><a class="back-menu-item" href="https://lengmo714.top/libs/xiangqi/index.html" title="象棋"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/xiangqi.ico" alt="象棋"/><span class="back-menu-item-text">象棋</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">平常心</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 户外小店</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" alt="wechat" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/wechat.png"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" alt="alipay" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/alipay.png"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/1024%E7%A8%8B%E5%BA%8F%E5%91%98%E8%8A%82/" style="font-size: 1.05rem;">1024程序员节<sup>1</sup></a><a href="/tags/Autodesk3dMax/" style="font-size: 1.05rem;">Autodesk3dMax<sup>1</sup></a><a href="/tags/C/" style="font-size: 1.05rem;">C<sup>6</sup></a><a href="/tags/Cocos-Creator/" style="font-size: 1.05rem;">Cocos Creator<sup>2</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>7</sup></a><a href="/tags/ImageView/" style="font-size: 1.05rem;">ImageView<sup>1</sup></a><a href="/tags/Java/" style="font-size: 1.05rem;">Java<sup>6</sup></a><a href="/tags/Lua/" style="font-size: 1.05rem;">Lua<sup>53</sup></a><a href="/tags/Mac/" style="font-size: 1.05rem;">Mac<sup>2</sup></a><a href="/tags/Next/" style="font-size: 1.05rem;">Next<sup>1</sup></a><a href="/tags/Python%E8%84%9A%E6%9C%AC/" style="font-size: 1.05rem;">Python脚本<sup>2</sup></a><a href="/tags/Sprite/" style="font-size: 1.05rem;">Sprite<sup>1</sup></a><a href="/tags/TypeScript/" style="font-size: 1.05rem;">TypeScript<sup>13</sup></a><a href="/tags/Xcode/" style="font-size: 1.05rem;">Xcode<sup>2</sup></a><a href="/tags/android/" style="font-size: 1.05rem;">android<sup>2</sup></a><a href="/tags/android-ndk/" style="font-size: 1.05rem;">android ndk<sup>1</sup></a><a href="/tags/cocos/" style="font-size: 1.05rem;">cocos<sup>2</sup></a><a href="/tags/cocos-Creator/" style="font-size: 1.05rem;">cocos Creator<sup>19</sup></a><a href="/tags/cocos-creator/" style="font-size: 1.05rem;">cocos creator<sup>1</sup></a><a href="/tags/cocos2dx/" style="font-size: 1.05rem;">cocos2dx<sup>24</sup></a><a href="/tags/facebook/" style="font-size: 1.05rem;">facebook<sup>1</sup></a><a href="/tags/git/" style="font-size: 1.05rem;">git<sup>2</sup></a><a href="/tags/java/" style="font-size: 1.05rem;">java<sup>2</sup></a><a href="/tags/lua/" style="font-size: 1.05rem;">lua<sup>4</sup></a><a href="/tags/mac/" style="font-size: 1.05rem;">mac<sup>2</sup></a><a href="/tags/ndkr10e/" style="font-size: 1.05rem;">ndkr10e<sup>1</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>14</sup></a><a href="/tags/shader/" style="font-size: 1.05rem;">shader<sup>1</sup></a><a href="/tags/%E5%A4%96%E6%8C%82%E6%A0%87%E7%AD%BE/" style="font-size: 1.05rem;">外挂标签<sup>1</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" style="font-size: 1.05rem;">游戏开发<sup>2</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E6%80%A7%E8%83%BD/" style="font-size: 1.05rem;">游戏性能<sup>1</sup></a><a href="/tags/%E7%94%9F%E6%B4%BB%E6%8A%80%E5%B7%A7/" style="font-size: 1.05rem;">生活技巧<sup>1</sup></a><a href="/tags/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" style="font-size: 1.05rem;">电脑使用技巧<sup>2</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 1.05rem;">硬件<sup>6</sup></a><a href="/tags/%E7%BA%B9%E7%90%86/" style="font-size: 1.05rem;">纹理<sup>1</sup></a><a href="/tags/%E7%BA%B9%E7%90%86%E4%BC%98%E5%8C%96/" style="font-size: 1.05rem;">纹理优化<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A0%81/" style="font-size: 1.05rem;">编码<sup>1</sup></a><a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 1.05rem;">自动化<sup>1</sup></a><a href="/tags/%E8%87%B4%E6%95%AC/" style="font-size: 1.05rem;">致敬<sup>1</sup></a><a href="/tags/%E8%8A%82%E6%97%A5/" style="font-size: 1.05rem;">节日<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">15</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" itemprop="url">编程语言</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Lua/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Lua</span></a></span></div></div><h1 class="post-title" itemprop="name headline">Lua语言入门</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2020-03-31T16:22:31.000Z" title="发表于 2020-04-01 00:22:31">2020-04-01</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2023-12-10T08:16:48.321Z" title="更新于 2023-12-10 16:16:48">2023-12-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为深圳"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>深圳</span><span class="post-meta-separator"></span><span class="post-meta-commentcount"><i class="anzhiyufont anzhiyu-icon-comments post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/41246.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/41246.html" itemprop="commentCount"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></a></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/img/photo/26.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://lengmo714.top/41246.html"><header><a class="post-meta-categories" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" itemprop="url">编程语言</a><a href="/tags/Lua/" tabindex="-1" itemprop="url">Lua</a><h1 id="CrawlerTitle" itemprop="name headline">Lua语言入门</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">南锋</span><time itemprop="dateCreated datePublished" datetime="2020-03-31T16:22:31.000Z" title="发表于 2020-04-01 00:22:31">2020-04-01</time><time itemprop="dateCreated datePublished" datetime="2023-12-10T08:16:48.321Z" title="更新于 2023-12-10 16:16:48">2023-12-10</time></header><p>遵照惯例，我们的第一个Lua程序时通过标准输出打印字符串”Hello World”:<br><code>print(&quot;Hello World&quot;)</code></p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3160571902547760"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-3160571902547760"
+     data-ad-slot="8630948880"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<p>如果读者使用的是Lua语言独立解释器(stand-alone interpreter)，要运行这第一个程序的话，直接调用解释器运行包含程序代码的文本文件就可以了。例如，如果把上述代码保存为名hello.lua的文件，那么可以通过以下命令运行：<br><code>% lua hello.lua</code></p>
+<p>再来看一个稍微复杂点的例子，以下代码定义了一个计算阶乘的函数，该函数先让用户输入一个数，然后打印出这个数的阶乘结果：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--定义一个计算阶乘的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fact</span><span class="params">(n)</span></span></span><br><span class="line">	<span class="keyword">if</span> n  == <span class="number">0</span> <span class="keyword">then</span></span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> n * fact(n<span class="number">-1</span>)</span><br><span class="line">	<span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;enter a number:&quot;</span>)</span><br><span class="line"></span><br><span class="line">a = <span class="built_in">io</span>.<span class="built_in">read</span>(<span class="string">&quot;*n&quot;</span>)  <span class="comment">--读取一个数字</span></span><br><span class="line"><span class="built_in">print</span>(fact(a))</span><br></pre></td></tr></table></figure></p>
+<h2 id="1-1-程序段"><a href="#1-1-程序段" class="headerlink" title="1.1 程序段"></a>1.1 程序段</h2><p>我们将Lua语言执行的每一段代码称为一个<em>程序段(Chunk)</em>，即一组命令或表达式组成的序列。<br>程序段既可以简单到只由一句表达式构成，也可以由多句表达式和函数定义（实际是复制表达式，后面会详细介绍）组成（例如计算阶乘的示例）。程序段在大小上并没有限制，事实上，由于Lua语言也可以被用作数据定义语言，所以几MB的程序段也很常见。Lua语言的解释器可以支持非常大的程序段。<br>除了将源码保存成文件外，我们有也可以直接在交互式模式(interactive mode)下运行独立解释器。当不带参数第调用lua时，可以看到如下的输出:<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">% lua</span><br><span class="line">Lua <span class="number">5.3</span> Copyright(C)<span class="number">1994</span><span class="number">-2016</span> Lua.org, PUC-Rio</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure><br>此后，输入的每一条命令都会在按下回车键后立即执行。我们可以通过输入<code>EPF</code>控制字符，或调用操作系统库的<code>exit</code>函数（执行<code>os.exit()</code>）退出交互模式。<br>从Lua5.3版本开始，可以直接在交互模式下输入表达式，Lua语言会输出表达式的值，例如：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">% lua</span><br><span class="line">Lua <span class="number">5.3</span> Copyright(C)<span class="number">1994</span><span class="number">-2016</span> Lua.org, PUC-Rio</span><br><span class="line">&gt; <span class="built_in">math</span>.<span class="built_in">pi</span> / <span class="number">4</span>         <span class="comment">--0.78539816339745</span></span><br><span class="line">&gt; a = <span class="number">15</span></span><br><span class="line">&gt; a^<span class="number">2</span>                 <span class="comment">--225</span></span><br><span class="line">&gt; a + <span class="number">2</span>               <span class="comment">--7</span></span><br></pre></td></tr></table></figure><br>要以代码段的方式运行代码（不在交互模式下），那么必须把表达式包在函数<code>print</code>的调用中：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">math</span>.<span class="built_in">pi</span>/<span class="number">4</span>)</span><br><span class="line">a = <span class="number">15</span></span><br><span class="line"><span class="built_in">print</span>(a^<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(a + <span class="number">2</span>)</span><br></pre></td></tr></table></figure><br>在交互模式下，Lua语言解释器一般会把我们输入的每一行当做完整的程序块或表达式解释执行。但是，如果Lua语言解释器发现我们输入的某一行不完成，那么它会等待直到程序块或表达式被输入完整后再进行解释执行。这样，我们也可以直接在交互模式下输入一个像阶乘函数示例那样的由多行组成的多行定义。不过，对于这种较长的函数定义而言，将其保存文件然后再调用独立解释器来执行通常更方便。<br>我们可以使用<code>-i</code>参数让Lua语言解释器在执行完制定的程序段后进入交互模式：<br><code>% lua -i prog</code><br>上述命令会在执行完文件prog中的程序后进入交互模式，这对于调试和手工测试很有用。在本章的最后，我们会学习有关独立解释器的更多参数。<br>另一种运行程序段的方式调用函数<code>dofile</code>，该函数会立即执行一个文件。例如，假设我们有一个如下所示的文件lib1.lua:<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">norm</span><span class="params">( x,y )</span></span></span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">math</span>.<span class="built_in">sqrt</span>(x^<span class="number">2</span> + y^<span class="number">2</span>)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">twice</span> <span class="params">(x)</span></span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">2.0</span> * x</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><br>然后，在交互模式下运行：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">dofile</span>(<span class="string">&#x27;lib1.lua&#x27;</span>)   <span class="comment">--加载文件</span></span><br><span class="line">&gt;n = norm(<span class="number">3.4</span>,<span class="number">1.0</span>)</span><br><span class="line">&gt;twice(n)             <span class="comment">--7.088018058677</span></span><br></pre></td></tr></table></figure><br>函数dofile在开发阶段也非常有用。我们可以同时打开两个窗口，一个窗口中使用文件编辑器编辑代码，另一个窗口中使用交互模式运行Lua语言解释器。当修改完代码并保存后，只要在Lua语言交互模式的提示符下执行dofile(“prog.lua”)就可以加载新代码，然后就可以观察新代码的函数调用和执行结果了。</p>
+<h2 id="1-2-一些语法规范"><a href="#1-2-一些语法规范" class="headerlink" title="1.2 一些语法规范"></a>1.2 一些语法规范</h2><p>Lua语言中的标识符是由任意字母、数字和下划线组成的字符串（注意不能用数字开头），例如：<br><code>i</code>,<code>j</code>,<code>i1</code>,<code>j1</code>,<code>_i</code>,<code>abc</code><br>“下划线 + 大写字母”组成的标识符通过被Lua语言用作特殊用途，应避免将其用作其他用途。我们通常将“下划线 + 小写字母”用作哑变量。<br>以下是Lua语言的保留字，它们不能被用作标识符：<br><code>and</code>,<code>brask</code>,<code>do</code>,<code>else</code>,<code>elseif</code>,<code>end</code>,<code>false</code>,<code>goto</code>,<code>for</code>,<code>function</code>,<code>if</code>,<code>in</code>,<code>local</code>,<code>nil</code>,<code>not</code>,<code>or</code>,<code>repeat</code>,<code>return</code>,<code>then</code>,<code>true</code>,<code>until</code>,<code>while</code><br>Lua语言是对大小写敏感的，因而<code>and</code>是保留字，但是<code>And</code>和<code>AND</code>就是两个不同的标识符。<br>Lua语言中使用两个连续的连字符（—）表示单行注释，使用两个连续的连字符加两对左方括号表示长注释或多行注释的开始，指导两个连续的右括号为止，中间都是注释，例如：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--[[多行</span></span><br><span class="line"><span class="comment">长注释</span></span><br><span class="line"><span class="comment">]]</span></span><br></pre></td></tr></table></figure><br>在注释一段代码时，一个常见的技巧是将这些代码放入—[[和—]]之间，例如：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--[[</span></span><br><span class="line"><span class="comment">print(10)   --无动作，被注释掉了</span></span><br><span class="line"><span class="comment">--]]</span></span><br></pre></td></tr></table></figure><br>当我们需要重新启用这段代码时，只需要在第一行行首添加一个连字符即可：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">---[[</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">10</span>)      <span class="comment">--10</span></span><br><span class="line"><span class="comment">--]]</span></span><br></pre></td></tr></table></figure><br>在第一个示例中，第一行的—[[表示一段多行注释的开始，直到两个连续的右括号这段多行注释才会结束，因而尽管最后一行有两个连续的连字符，但由于这两个连字符在最后两个右括号之前，所以仍然被注释掉了。在第二个示例中，由于第一行的—[[实际是单行注释，因此最后一行实际上也是一条独立的单行注释（最后的两个连续右方括号没有与之匹配的—[[），print并没有被注释掉。<br>在Lua语言中，连续语句之间的分隔符并不是必需的，如果有需要的话可以使用分号来进行分割。在Lua语言中，表达式之间的换行也不起任何作用。例如，以下4个程序段都是合法且等价的：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span> </span><br><span class="line">b = a * <span class="number">2</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">1</span>;</span><br><span class="line">b = a * <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">a = <span class="number">1</span>; b = a * <span class="number">2</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">1</span> b = a * <span class="number">2</span></span><br></pre></td></tr></table></figure><br>这个根据个人习惯来。</p>
+<h2 id="1-3-全局变量"><a href="#1-3-全局变量" class="headerlink" title="1.3 全局变量"></a>1.3 全局变量</h2><p>在Lua语言中，全局变量无须声明即可使用，使用未经初始化的全局变量也不会导致错误。当使用未经初始化的全局变量时，得到的结果是<code>nil</code>：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; b      <span class="comment">-- nil</span></span><br><span class="line">&gt; b = <span class="number">10</span> </span><br><span class="line">&gt; b      <span class="comment">--10</span></span><br></pre></td></tr></table></figure><br>当把<code>nil</code>赋值给全局变量时，Lua会回收改全局变量（就像该全局变量从来没有出现过一样），例如：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; b = <span class="literal">nil</span></span><br><span class="line">&gt; b         			<span class="comment">--nil</span></span><br></pre></td></tr></table></figure><br>Lua语言不区分为初始化变量和被赋值为nil的变量。在上述赋值语句执行后，Lua语言会最终回收该变量占用的内存。</p>
+<h2 id="1-4类型和值"><a href="#1-4类型和值" class="headerlink" title="1.4类型和值"></a>1.4类型和值</h2><p>Lua语言是一种动态类型的语言，在这种语言中没有类型定义，每个值都带有其自身的类型信息。<br>Lua语言中有8个基本类型：nil（空）、bloolean（布尔）、number（数值）、string（字符串）、userdata（用户数据）、function（函数）、thread（线程）和table（表）。使用函数type可获取一个值对应的类型名称：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">type</span>(<span class="literal">nil</span>)			<span class="comment">-- nil</span></span><br><span class="line">&gt;<span class="built_in">type</span>(<span class="literal">true</span>)			<span class="comment">-- boolean</span></span><br><span class="line">&gt;<span class="built_in">type</span>(<span class="number">10.4</span>*<span class="number">3</span>)		<span class="comment">--number</span></span><br><span class="line">&gt;<span class="built_in">type</span>(<span class="string">&quot;Hello World&quot;</span>)<span class="comment">--string</span></span><br><span class="line">&gt;<span class="built_in">type</span>(<span class="built_in">io</span>.<span class="built_in">stdin</span>)		<span class="comment">--userdata</span></span><br><span class="line">&gt;<span class="built_in">type</span>(<span class="built_in">print</span>)		<span class="comment">--function</span></span><br><span class="line">&gt;<span class="built_in">type</span>(<span class="built_in">type</span>)			<span class="comment">--thread</span></span><br><span class="line">&gt;<span class="built_in">type</span>(&#123;&#125;)			<span class="comment">--table</span></span><br><span class="line">&gt;<span class="built_in">type</span>(<span class="built_in">type</span>(X))		<span class="comment">--string</span></span><br></pre></td></tr></table></figure><br>不管X是什么，最后一行返回的永远是“string”。这是因为函数type的返回值永远是一个字符串。<br>userdata类型允许把任意的C语言数据保存在Lua语言变量中。在Lua语言中，用户数据类型除了赋值和相等性测试外，没有其他预定义的操作。用户数据被用来表示由应用或C语言编写的库所创建的新类型。例如，标准I/O库使用用户数据来表示打开的文件。我们会在后面设计C API时再讨论更多的相关内容。<br>变量没有预定义的类型，任何变量都可以包含任何类型的值：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="built_in">type</span>(a)		<span class="comment">-- nil(a没有初始化)</span></span><br><span class="line">&gt;a = <span class="number">10</span></span><br><span class="line">&gt;<span class="built_in">type</span>(a)		<span class="comment">--number</span></span><br><span class="line">&gt;a = <span class="string">&quot;a string!&quot;</span></span><br><span class="line">&gt;<span class="built_in">type</span>(a)		<span class="comment">--string</span></span><br><span class="line">&gt;a = <span class="literal">nil</span> </span><br><span class="line">&gt;<span class="built_in">type</span>(a)		<span class="comment">--nil</span></span><br></pre></td></tr></table></figure><br>一般情况下，将一个变量用作不同类型时会导致代码的可读性不佳；但是，在某些情况下谨慎地使用这个特行可能会带来一定程度的便利。例如，当代码发生异常时可以返回一个nil以区别于其他正常情况下的返回值。</p>
+<h3 id="1-4-1-nil"><a href="#1-4-1-nil" class="headerlink" title="1.4.1 nil"></a>1.4.1 nil</h3><p>nil是一种只有一个nil值的类型，它的主要作用就是与其他所有值进行区分。Lua语言使用nil来表示无效值的情况。像我们所学习的其他语言，一个全局变量在第一次被赋值前的默认值就是nil，而将nil赋值给全局变量则相当于将其删除。</p>
+<h3 id="1-4-2-boolean"><a href="#1-4-2-boolean" class="headerlink" title="1.4.2 boolean"></a>1.4.2 boolean</h3><p>boolean类型具有两个值，<em>true</em>和<em>false</em>，它们分别代表了传统布尔值。不过，在Lua语言中，Boolean值并非是用于条件测试的唯一方式，任何值都可以表示条件。在Lua语言中，条件测试将除Boolean值false和nil外的所有其他值视为真。特别的是，在条件检测中Lua语言把零和空字符串也都视为真。<br>Lua语言支持常见的逻辑运算符：<code>and</code>,<code>or</code>和<code>not</code>。和条检测试一样，所有的逻辑运算将Boolean类型的false和nil当做假，而把其他值当作真。</p>
+<h2 id="1-5-独立解释器"><a href="#1-5-独立解释器" class="headerlink" title="1.5 独立解释器"></a>1.5 独立解释器</h2><p>独立解释器是一个可以直接使用Lua语言的小程序。<br>如果源代码文件第一行以井号（#）开头，那么解释器在加载该文件时会忽略这一行。这个特征主要是为了方便在POSIX系统中将Lua作为一种脚本解释器来使用。假设独立解释器位于/usr/local/bin下，当使用下列脚本:<br><code>#!/usr/local/bin/lua</code><br>或<br><code>#!/usr/bin/env lua</code><br>时，不需要显式地调用Lua语言解释器也可以直接运行Lua脚本。<br>lua命令的完整参数如：<br><code>lua [options] [script [args]]</code><br>其中，所有的参数都是可选的。如前所述，当不使用任何参数调用lua时，就会直接进入交互模式。<br> -e参数允许我们直接在命令行中输入代码，例如<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% lua -e <span class="string">&quot;print(math.sin(12))&quot;</span> </span><br></pre></td></tr></table></figure><br>请注意，在POSIX系统下需要使用双引号，以防止Shell错误第解析括号。<br>-l参数用于加载库。正如之前提到的那样，-i参数用于在运行完其他命令行参数后进入交互模式。因此，下面的命令会首先加载lib库，然后执行x=10的赋值语句，并最终进入交互模式：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% lua -i -llib -e <span class="string">&quot;x = 10&quot;</span></span><br></pre></td></tr></table></figure><br>如果在交互模式下输入表达式，那么解释器会输出表达式求值后的结果：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="built_in">math</span>.<span class="built_in">sin</span>(<span class="number">3</span>)</span><br><span class="line">&gt; a = <span class="number">30</span> </span><br><span class="line">&gt; a 			<span class="comment">--30</span></span><br></pre></td></tr></table></figure><br>请记住，这个特征只在Lua5.3及之后的版本中才有效。在之前的版本中，必须在表达式前加上一个等号。如果不想输出结果，那么可以在行末加上一个分号：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="built_in">io</span>.<span class="built_in">flush</span>()	<span class="comment">--true</span></span><br><span class="line">&gt; <span class="built_in">io</span>.<span class="built_in">flush</span>();</span><br></pre></td></tr></table></figure><br>分号使得最后一行在语法上变成了无效的表达式，但可以被当作有效命令执行。<br>解释器在处理参数前，会查找名为<code>LUA_INIT_5_3</code>的环境变量，如果找不到，就会再查找名为<code>LUA_INIT</code>的环境变量。如果这两个环境变量中的任意一个存在，并且其内容为<code>@filename</code>，那么解释器就会运行相应的文件；如果这两个环境变量存在，但是不以@开头，那么解释器就会认为其包含Lua代码，并会对其进行解释执行。由于可以通过上面的方法完整地配置Lua，因而LUA_INIT使得我们可以灵活地配置独立解释器。例如，我们可以预先加载程序包、修改路径、定义自定义函数、对函数进行重命名或删除函数，等等。<br>我们可以通过预先定义的全局变量arg来获取解释器传入的参数。例如，当执行如下命令时：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% lua script a b c</span><br></pre></td></tr></table></figure><br>编辑器在运行代码前或创建一个名为arg的表，其中存储了所有的命令行参数。索引0中保存的内容为脚本名，索引1中保存的内容为第一个参数，以此类推；而在脚本之前的所有选项则位于负数索引上，例如：<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% lua -e <span class="string">&quot;sin = math.sin&quot;</span> script a b</span><br></pre></td></tr></table></figure><br>解释器按照如下的方式获取参数:<br><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">arg</span>[<span class="number">-3</span>] = <span class="string">&quot;lua&quot;</span></span><br><span class="line"><span class="built_in">arg</span>[<span class="number">-2</span>] = <span class="string">&quot;-e&quot;</span></span><br><span class="line"><span class="built_in">arg</span>[<span class="number">-1</span>] = <span class="string">&quot;sin = math.sin&quot;</span></span><br><span class="line"><span class="built_in">arg</span>[<span class="number">0</span>]  = <span class="string">&quot;script&quot;</span></span><br><span class="line"><span class="built_in">arg</span>[<span class="number">1</span>]  = <span class="string">&quot;a&quot;</span></span><br><span class="line"><span class="built_in">arg</span>[<span class="number">2</span>]  = <span class="string">&quot;b&quot;</span></span><br></pre></td></tr></table></figure><br>一般情况下，脚本只会用到索引为证书的参数。<br>Lua语言也支持可变长参数，可以通过可变长参数表达式来获取。在脚本文件中，表达式…（3个点）表示传递给脚本的所有参数。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s1.ax1x.com/2023/07/07/pCcyHeI.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s1.ax1x.com/2023/07/07/pCcyHeI.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">南锋</div><div class="post-copyright__author_desc">南奔万里空，脱死锋镝余</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://lengmo714.top/41246.html">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://lengmo714.top/41246.html')">Lua语言入门</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/wechat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/wechat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://lengmo714.top/41246.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=Lua语言入门&amp;url=https://lengmo714.top/41246.html&amp;pic=/img/photo/26.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://lengmo714.top" target="_blank">平常心</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Lua/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Lua<span class="tagsPageCount">53</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="/img/photo/26.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><div class="ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3160571902547760"data-ad-slot="1519762621" data-ad-format="auto" data-full-width-responsive="true"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script></div><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/21185.html" title="Lua连续教程之C语言API总览"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/photo/18.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2020-06-26</div><div class="title">Lua连续教程之C语言API总览</div></div></a></div><div><a href="/54099.html" title="Lua-cjson安装及部署"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/photo/15.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-10-15</div><div class="title">Lua-cjson安装及部署</div></div></a></div><div><a href="/3247.html" title="Lua中“.”和“:”区别"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/photo/5.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2019-03-17</div><div class="title">Lua中“.”和“:”区别</div></div></a></div><div><a href="/36819.html" title="Lua中函数的使用"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/photo/10.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2020-04-10</div><div class="title">Lua中函数的使用</div></div></a></div><div><a href="/15834.html" title="Lua中模块和包"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/photo/25.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2020-04-21</div><div class="title">Lua中模块和包</div></div></a></div><div><a href="/63692.html" title="Lua连续教程之Lua中的数值"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/photo/20.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2020-04-06</div><div class="title">Lua连续教程之Lua中的数值</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s1.ax1x.com/2023/07/07/pCcyHeI.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description">记录工作中的一些笔记以及一些有趣的代码,致力于成为一个优秀的程序员</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">南锋</h1><div class="author-info__desc">南奔万里空，脱死锋镝余</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://lengmo714.top" target="_blank" title="网站"><i class="anzhiyufont anzhiyu-icon-网站"></i></a></div></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://s1.ax1x.com/2023/07/20/pC7sQz9.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://s1.ax1x.com/2023/07/20/pC7sQz9.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E7%A8%8B%E5%BA%8F%E6%AE%B5"><span class="toc-number">1.</span> <span class="toc-text">1.1 程序段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="toc-number">2.</span> <span class="toc-text">1.2 一些语法规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">3.</span> <span class="toc-text">1.3 全局变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%80%BC"><span class="toc-number">4.</span> <span class="toc-text">1.4类型和值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-nil"><span class="toc-number">4.1.</span> <span class="toc-text">1.4.1 nil</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-boolean"><span class="toc-number">4.2.</span> <span class="toc-text">1.4.2 boolean</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-%E7%8B%AC%E7%AB%8B%E8%A7%A3%E9%87%8A%E5%99%A8"><span class="toc-number">5.</span> <span class="toc-text">1.5 独立解释器</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/bfdsa78.html" title="给hexo博客添加历史上的今天侧边栏"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/photo/26.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="给hexo博客添加历史上的今天侧边栏"/></a><div class="content"><a class="title" href="/bfdsa78.html" title="给hexo博客添加历史上的今天侧边栏">给hexo博客添加历史上的今天侧边栏</a><time datetime="2023-12-11T16:32:28.000Z" title="发表于 2023-12-12 00:32:28">2023-12-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/33452.html" title="cocos2dx使用帧动画"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/photo/17.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cocos2dx使用帧动画"/></a><div class="content"><a class="title" href="/33452.html" title="cocos2dx使用帧动画">cocos2dx使用帧动画</a><time datetime="2023-12-06T16:11:49.000Z" title="发表于 2023-12-07 00:11:49">2023-12-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/43145.html" title="cocos2dx(3.17)中csb文件使用方法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/photo/4.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cocos2dx(3.17)中csb文件使用方法"/></a><div class="content"><a class="title" href="/43145.html" title="cocos2dx(3.17)中csb文件使用方法">cocos2dx(3.17)中csb文件使用方法</a><time datetime="2023-12-06T16:11:38.000Z" title="发表于 2023-12-07 00:11:38">2023-12-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/19422.html" title="cocos2dx-lua游戏开发"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/photo/2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cocos2dx-lua游戏开发"/></a><div class="content"><a class="title" href="/19422.html" title="cocos2dx-lua游戏开发">cocos2dx-lua游戏开发</a><time datetime="2023-12-06T16:11:32.000Z" title="发表于 2023-12-07 00:11:32">2023-12-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/27430.html" title="cocos2dx-lua中Label文本设置自动换行"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/photo/7.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cocos2dx-lua中Label文本设置自动换行"/></a><div class="content"><a class="title" href="/27430.html" title="cocos2dx-lua中Label文本设置自动换行">cocos2dx-lua中Label文本设置自动换行</a><time datetime="2023-12-06T16:11:24.000Z" title="发表于 2023-12-07 00:11:24">2023-12-07</time></div></div></div></div><div class="card-widget ads-wrap"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3160571902547760" data-ad-slot="8603496982" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="/842673413@qq.com" title="email"><i class="anzhiyufont anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://weibo.com/u/3124723200" title="微博"><i class="anzhiyufont anzhiyufont anzhiyu-icon-weibo"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s1.ax1x.com/2023/07/07/pCcyHeI.png" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/lengmo714" title="Github"><i class="anzhiyufont anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/ikhTESN/" title="抖音"><i class="anzhiyufont anzhiyufont anzhiyu-icon-tiktok"></i></a></div><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/work.svg" alt="距离月入35k也就还差一个大佬带我~" title="距离月入35k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" style="margin-inline:5px" data-title="本站已经备案" title="本站已经备案"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/feng.svg" alt="本站已经备案"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2022 - 2023 By <a class="footer-bar-link" href="/" title="南锋" target="_blank">南锋</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">160</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">128</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">65</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://lengmo714.top" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a><a class="back-menu-item" href="https://lengmo714.top/libs/map/index.html" title="足迹"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/zuji.ico" alt="足迹"/><span class="back-menu-item-text">足迹</span></a><a class="back-menu-item" href="https://lengmo714.top/libs/love.html" title="爱心"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/heart.ico" alt="爱心"/><span class="back-menu-item-text">爱心</span></a><a class="back-menu-item" href="https://lengmo714.top/libs/Love/baby.html" title="表白网站"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/lianai.ico" alt="表白网站"/><span class="back-menu-item-text">表白网站</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">备用网站</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://lengmo714.gitee.io" title="平常心备用网站"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/beifen.ico" alt="平常心备用网站"/><span class="back-menu-item-text">平常心备用网站</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">京东小店</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://mall.jd.com/index-12955410.html" title="京东小店"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/jingdong.ico" alt="京东小店"/><span class="back-menu-item-text">京东小店</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">小游戏</div><div class="back-menu-list"><a class="back-menu-item" href="https://lengmo714.top/libs/xiangqi/index.html" title="象棋"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/xiangqi.ico" alt="象棋"/><span class="back-menu-item-text">象棋</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 户外小店</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><a id="switch-commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-info"><div class="algolia-stats"></div><div class="algolia-poweredBy"></div></div></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("11/11/2022 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2022 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 南锋 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("11/11/2022 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "/img/fengbaobao.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="https://cdn.cbd.int/algoliasearch@4.18.0/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.cbd.int/instantsearch.js@4.60.0/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"><script>(() => {
+  const initValine = () => {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'YsQGBgpvH7i6nSDWekzhTmIv-gzGzoHsz',
+      appKey: 'HZzy2We3Ks5LQmQ4TjXkKfHn',
+      avatar: 'mp',
+      serverURLs: 'https://lean1.lengmo714.top',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  const loadValine = async () => {
+    if (typeof Valine === 'function') initValine()
+    else {
+      await getScript('https://cdn.cbd.int/valine@1.5.1/dist/Valine.min.js')
+      initValine()
+    }
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script src="https://cdn.cbd.int/blueimp-md5@2.19.0/js/md5.min.js"></script><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getIcon = (icon, mail) => {
+    if (icon) return icon
+    let defaultIcon = '?d=mp'
+    let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
+    return iconUrl
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const serverURL = 'https://lean1.lengmo714.top'
+
+    var settings = {
+      "method": "GET",
+      "headers": {
+        "X-LC-Id": 'YsQGBgpvH7i6nSDWekzhTmIv-gzGzoHsz',
+        "X-LC-Key": 'HZzy2We3Ks5LQmQ4TjXkKfHn',
+        "Content-Type": "application/json"
+      },
+    }
+
+    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
+      .then(response => response.json())
+      .then(data => {
+        const valineArray = data.results.map(function (e) {
+          return {
+            'avatar': getIcon(e.QQAvatar, e.mail),
+            'content': changeContent(e.comment),
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.updatedAt,
+          }
+        })
+        saveToLocal.set('valine-newest-comments', JSON.stringify(valineArray), 10/(60*24))
+        generateHtml(valineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      }) 
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('valine-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "lengmo714@163.com";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3160571902547760" crossorigin="anonymous"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><!-- hexo injector body_end start --><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
