@@ -7,7 +7,7 @@ Allow: /awesome/
 Allow: /js/
 Allow: /css/
 Allow: /images/
-Allow: /fonts/
+Disallow: /fonts/
 
 Sitemap: https://lengmo714.top/sitemap.xml
 Sitemap: https://lengmo714.top/baidusitemap.xml
