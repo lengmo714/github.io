@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <title>love</title>
     <style>
         body {
@@ -14,7 +14,7 @@
             justify-content: center;
             align-items: center;
         }
- 
+
         .loveMargin {
             width: 300px;
             height: 300px;
@@ -25,7 +25,7 @@
             animation: scaleDraw 3s infinite;
             -webkit-animation: scaleDraw 3s infinite;
         }
- 
+
         .loveMargin::after {
             content: '';
             position: absolute;
@@ -38,7 +38,7 @@
             /* backdrop-filter: saturate(75%) blur(0px); */
             border-radius: 50%;
         }
- 
+
         .loveMargin::before {
             content: '';
             position: absolute;
@@ -50,45 +50,45 @@
             /* backdrop-filter: saturate(75%) blur(0px); */
             border-radius: 50%;
         }
- 
+
         .a1 {
             transform: scale(1.2);
         }
- 
+
         .a2 {
             transform: scale(0.9);
             position: absolute;
             top: 4px;
         }
- 
+
         .a2 {
             transform: scale(0.9);
             position: absolute;
             top: -6px;
             left: -6px;
         }
- 
+
         .a4 {
             transform: scale(0.5);
             position: absolute;
             top: -10px;
             left: -10px;
         }
- 
+
         .a5 {
             transform: scale(0.9);
             position: absolute;
             top: 10px;
             left: -10px;
         }
- 
+
         .a6 {
             transform: scale(0.9);
             position: absolute;
             top: 6px;
             left: -10px;
         }
- 
+
         .loveContent {
             background: linear-gradient(148deg, #fff, transparent 2px), linear-gradient(45deg, #c55473 0px, transparent 3px);
             width: 250px;
@@ -101,7 +101,7 @@
             /* animation: scaleDraw 2s infinite;
             -webkit-animation: scaleDraw 2s infinite; */
         }
- 
+
         .loveContent::after {
             content: '';
             position: absolute;
@@ -115,7 +115,7 @@
             border-radius: 50%;
             z-index: 200;
         }
- 
+
         .loveContent::before {
             content: '';
             position: absolute;
@@ -128,55 +128,55 @@
             border-radius: 50%;
             z-index: 200;
         }
- 
+
         .c1 {
             z-index: 200;
             top: 22px;
             left: 22px;
         }
- 
+
         .c2 {
             z-index: 210;
             top: 23px;
             left: 23px;
         }
- 
+
         .c3 {
             z-index: 205;
             top: 25px;
             left: 25px;
         }
- 
+
         .c4 {
             z-index: 280;
             top: 21px;
             left: 20px;
         }
- 
+
         .c5 {
             z-index: 206;
             top: 20px;
             left: 18px;
         }
- 
+
         .c6 {
             z-index: 220;
             top: 18px;
             left: 20px;
         }
- 
+
         .c7 {
             z-index: 211;
             top: 19px;
             left: 19px;
         }
- 
+
         .c8 {
             z-index: 221;
             top: 23px;
             left: 20px;
         }
- 
+
         .loveItem {
             width: 200px;
             height: 200px;
@@ -191,7 +191,7 @@
             animation: scaleDraw 2s infinite;
             -webkit-animation: scaleDraw 2s infinite;
         }
- 
+
         .loveItem::after {
             content: '';
             position: absolute;
@@ -205,7 +205,7 @@
             /* backdrop-filter: saturate(75%) blur(0px); */
             border-radius: 50%;
         }
- 
+
         .loveItem::before {
             content: '';
             position: absolute;
@@ -218,61 +218,68 @@
             /* backdrop-filter: saturate(75%) blur(0px); */
             border-radius: 50%;
         }
- 
+
         @keyframes scaleDraw {
             /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
- 
+
             0% {
                 transform: scale(1);
                 /*开始为原始大小*/
             }
- 
+
             50% {
                 transform: scale(1.1);
                 /*放大1.1倍*/
             }
- 
+
             100% {
                 transform: scale(1);
                 /*开始为原始大小*/
             }
         }
- 
-        .i1{
+
+        .i1 {
             top: 57px;
             left: 51px;
         }
-        .i2{
+
+        .i2 {
             top: 51px;
             left: 57px;
         }
-        .i3{
+
+        .i3 {
             top: 50px;
             left: 52px;
         }
-        .i4{
+
+        .i4 {
             top: 60px;
             left: 60px;
         }
-        .i5{
+
+        .i5 {
             top: 58px;
             left: 51px;
         }
-        .i6{
+
+        .i6 {
             top: 58px;
             left: 52px;
         }
-        .i7{
+
+        .i7 {
             top: 62px;
             left: 60px;
         }
-        .i8{
+
+        .i8 {
             top: 68px;
             left: 61px;
         }
     </style>
 </head>
- 
+
 <body>
     <div style="transform: rotate(45deg);">
         <div class="loveMargin a1">
@@ -300,7 +307,7 @@
             <div class="loveItem i8"></div>
         </div>
     </div>
- 
+
 </body>
- 
+
 </html>
